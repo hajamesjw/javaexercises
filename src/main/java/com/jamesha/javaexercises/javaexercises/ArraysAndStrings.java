@@ -2,6 +2,10 @@ package com.jamesha.javaexercises.javaexercises;
 
 import java.util.Arrays;
 
+/*
+ * Cracking the Coding Interview, 6th
+ * Chapter 1 Solutions
+ */
 public class ArraysAndStrings {
 
 	/*

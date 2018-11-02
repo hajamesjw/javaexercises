@@ -1,5 +1,7 @@
 package com.jamesha.javaexercises.javaexercises;
 
+import java.util.Arrays;
+
 public class ArraysAndStrings {
 
 	/*
@@ -7,6 +9,15 @@ public class ArraysAndStrings {
 	 * Is Unique: Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?
 	 */
 	public static boolean isUnique(String string) {
+		char[] charArray = string.toCharArray();
+		Arrays.sort(charArray);
+		char previousChar = charArray[0];
+		for (int i = 1; i < charArray.length; i++) {
+			if (previousChar == charArray[i]) {
+				return false;
+			}
+			previousChar = charArray[i];
+		}
 		return true;
 	}
 	

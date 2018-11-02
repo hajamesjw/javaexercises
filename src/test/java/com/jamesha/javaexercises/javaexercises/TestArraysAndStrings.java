@@ -20,6 +20,10 @@ public class TestArraysAndStrings {
 	@Test
 	public void testCheckPermutationReturnTrueWhenStringsArePermutations() {
 		assertTrue(ArraysAndStrings.checkPermutation("Abba", "Baba"));
-
+	}
+	
+	@Test
+	public void testCheckPermutationReturnFalseWhenStringsAreNotPermutations() {
+		assertFalse(ArraysAndStrings.checkPermutation("Abba", "Wxyz"));
 	}
 }

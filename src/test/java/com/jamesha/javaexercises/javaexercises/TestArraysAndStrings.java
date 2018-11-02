@@ -8,12 +8,18 @@ import org.junit.jupiter.api.Test;
 public class TestArraysAndStrings {
 	
 	@Test
-	public void testIsUniqueReturnsTrueWhenAllCharactersAreUnique() {
+	public void testIsUniqueReturnTrueWhenAllCharactersAreUnique() {
 		assertTrue(ArraysAndStrings.isUnique("abcdef"));
 	}
 	
 	@Test
-	public void testIsUniqueReturnsFalseWhenAllCharactersAreNotUnique() {
+	public void testIsUniqueReturnFalseWhenAllCharactersAreNotUnique() {
 		assertFalse(ArraysAndStrings.isUnique("aabcdd"));
+	}
+	
+	@Test
+	public void testCheckPermutationReturnTrueWhenStringsArePermutations() {
+		assertTrue(ArraysAndStrings.checkPermutation("Abba", "Baba"));
+
 	}
 }

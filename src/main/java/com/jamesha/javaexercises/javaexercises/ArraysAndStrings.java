@@ -25,7 +25,9 @@ public class ArraysAndStrings {
 	 * p.90 1.2
 	 * Check Permutation: Given two strings, write a method to decide if one is a permutation of the other.
 	 */
-	
+	public static boolean checkPermutation(String stringA, String stringB) {
+		return true;
+	}
 	
 	/*
 	 * p.90 1.3

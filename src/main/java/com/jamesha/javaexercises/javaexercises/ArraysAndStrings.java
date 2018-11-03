@@ -42,8 +42,16 @@ public class ArraysAndStrings {
 	 * URLify: Write a method to replace all spaces in a string with '%20: You may assume that the string has sufficient space at the end to hold the additional characters, 
 	 * and that you are given the "true" length of the string. (Note: If implementing in Java, please use a character array so that you can perform this operation in place.)
 	 */
-	public static Object urlify(String string, int i) {
-		// TODO Auto-generated method stub
-		return "Mr%20John%20Smith";
+	public static String urlify(String string, int trueLengthOfString) {
+		char[] charArray = string.toCharArray();
+		String urlifyString = "";
+		for (int i = 0; i < trueLengthOfString; i++) {
+			if (charArray[i] == ' ') {
+				urlifyString = urlifyString + "%20";
+			} else {
+				urlifyString = urlifyString + charArray[i];
+			}
+		}
+		return urlifyString;
 	}
 }

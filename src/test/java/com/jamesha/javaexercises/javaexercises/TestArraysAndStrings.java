@@ -32,4 +32,9 @@ public class TestArraysAndStrings {
 	public void testUrlify() {
 		assertEquals("Mr%20John%20Smith", ArraysAndStrings.urlify("Mr John Smith    ", 13));
 	}
+	
+	@Test
+	public void testPalindromePermutationReturnTrueWhenStringIsPermutationOfPalindrome() {
+		assertTrue(ArraysAndStrings.palindromePermutation("Tact Coa"));
+	}
 }

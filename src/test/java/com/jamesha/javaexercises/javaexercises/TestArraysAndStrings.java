@@ -49,8 +49,13 @@ public class TestArraysAndStrings {
 	}
 	
 	@Test
-	public void testTwoAwayWithWhenTwoCharacterIsReplacedReturnFalse() {
+	public void testOneAwayWhenTwoCharacterIsReplacedReturnFalse() {
 		assertFalse(ArraysAndStrings.oneAway("abcde", "abczz"));
+	}
+	
+	@Test
+	public void testOneAwayWithSameStringsReturnFalse() {
+		assertFalse(ArraysAndStrings.oneAway("abcde", "abcde"));
 	}
 	
 }

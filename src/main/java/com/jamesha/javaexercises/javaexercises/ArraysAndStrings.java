@@ -98,8 +98,8 @@ public class ArraysAndStrings {
 	public static boolean oneAway(String string, String string2) {
 		char[] charArray = string.toCharArray();
 		char[] charArray2 = string2.toCharArray();
+		boolean oneCharacterAlreadyAwayFlag = false;
 		if (charArray.length == charArray2.length) {
-			boolean oneCharacterAlreadyAwayFlag = false;
 			for (int i = 0; i < charArray.length; i++) {
 				if (charArray[i] != charArray2[i]) {
 					if (oneCharacterAlreadyAwayFlag) {
@@ -110,6 +110,10 @@ public class ArraysAndStrings {
 				}
  			}
 		}
+		if (!oneCharacterAlreadyAwayFlag) {
+			return false;
+		}
+		
 		return true;
 	}
 }

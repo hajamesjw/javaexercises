@@ -1,5 +1,6 @@
 package com.jamesha.javaexercises.javaexercises;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -25,5 +26,10 @@ public class TestArraysAndStrings {
 	@Test
 	public void testCheckPermutationReturnFalseWhenStringsAreNotPermutations() {
 		assertFalse(ArraysAndStrings.checkPermutation("Abba", "Wxyz"));
+	}
+	
+	@Test
+	public void testUrlify() {
+		assertEquals("Mr%20John%20Smith", ArraysAndStrings.urlify("Mr John Smith    ", 13));
 	}
 }

@@ -73,6 +73,7 @@ public class ArraysAndStrings {
 			if (charArray[i] == charArray[i + 1]) {
 				Array.setChar(charArray, i, ' ');
 				Array.setChar(charArray, i + 1, ' ');
+				i++;
 			}
 		}
 		

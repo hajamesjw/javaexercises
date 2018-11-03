@@ -41,6 +41,16 @@ public class TestArraysAndStrings {
 	@Test
 	public void testPalindromePermutationRetrunFalseWhenStringIsNotPermutationOfPalindrome() {
 		assertFalse(ArraysAndStrings.palindromePermutation("Zenith"));
-
 	}
+	
+	@Test
+	public void testOneAwayWhenOneCharacterIsReplacedReturnTrue() {
+		assertTrue(ArraysAndStrings.oneAway("abcde", "abcdz"));
+	}
+	
+	@Test
+	public void testTwoAwayWithWhenTwoCharacterIsReplacedReturnFalse() {
+		assertFalse(ArraysAndStrings.oneAway("abcde", "abczz"));
+	}
+	
 }

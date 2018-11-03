@@ -32,12 +32,12 @@ public class ArraysAndStrings {
 	 * p.90 1.2
 	 * Check Permutation: Given two strings, write a method to decide if one is a permutation of the other.
 	 */
-	public static boolean checkPermutation(String stringA, String stringB) {
-		char[] charArrayA = stringA.toLowerCase().toCharArray();
-		char[] charArrayB = stringB.toLowerCase().toCharArray();
-		Arrays.sort(charArrayA);
-		Arrays.sort(charArrayB);
-		return Arrays.equals(charArrayA, charArrayB);
+	public static boolean checkPermutation(String string, String string2) {
+		char[] charArray = string.toLowerCase().toCharArray();
+		char[] charArray2 = string2.toLowerCase().toCharArray();
+		Arrays.sort(charArray);
+		Arrays.sort(charArray2);
+		return Arrays.equals(charArray, charArray2);
 	}
 
 	// TODO: Perform this operation in place.
@@ -87,12 +87,29 @@ public class ArraysAndStrings {
 		}
 		
 		return true;
-		
-		/*
-		 * p.91 1.5
-		 * One Away: There are three types of edits that can be performed on strings: 
-		 * insert a character, remove a character, or replace a character. 
-		 * Given two strings, write a function to check if they are one edit (or zero edits) away.
-		 */
+	}
+	
+	/*
+	 * p.91 1.5
+	 * One Away: There are three types of edits that can be performed on strings: 
+	 * insert a character, remove a character, or replace a character. 
+	 * Given two strings, write a function to check if they are one edit (or zero edits) away.
+	 */
+	public static boolean oneAway(String string, String string2) {
+		char[] charArray = string.toCharArray();
+		char[] charArray2 = string2.toCharArray();
+		if (charArray.length == charArray2.length) {
+			boolean oneCharacterAlreadyAwayFlag = false;
+			for (int i = 0; i < charArray.length; i++) {
+				if (charArray[i] != charArray2[i]) {
+					if (oneCharacterAlreadyAwayFlag) {
+						return false;
+					} else {
+						oneCharacterAlreadyAwayFlag = true;
+					}
+				}
+ 			}
+		}
+		return true;
 	}
 }

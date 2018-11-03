@@ -1,6 +1,9 @@
 package com.jamesha.javaexercises.javaexercises;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /*
  * Cracking the Coding Interview, 6th
@@ -55,6 +58,7 @@ public class ArraysAndStrings {
 		return urlifyString;
 	}
 	
+	//TODO: This took longer than I would have liked.
 	/*
 	 * p.91 1.4
 	 * Palindrome Permutation: Given a string, write a function to check if it is a permutation of a palindrome. 
@@ -62,6 +66,20 @@ public class ArraysAndStrings {
 	 * The palindrome does not need to be limited to just dictionary words. EXAMPLE
 	 */
 	public static boolean palindromePermutation(String string) {
+		char[] charArray = string.toLowerCase().toCharArray();
+		Arrays.sort(charArray);
+		
+		for (int i = 0; i + 1 < charArray.length; i++) {
+			if (charArray[i] == charArray[i + 1]) {
+				Array.setChar(charArray, i, ' ');
+				Array.setChar(charArray, i + 1, ' ');
+			}
+		}
+		
+		if (String.valueOf(charArray).trim().length() > 1) {
+			return false;
+		}
+		
 		return true;
 	}
 }

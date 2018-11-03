@@ -37,4 +37,10 @@ public class TestArraysAndStrings {
 	public void testPalindromePermutationReturnTrueWhenStringIsPermutationOfPalindrome() {
 		assertTrue(ArraysAndStrings.palindromePermutation("Tact Coa"));
 	}
+	
+	@Test
+	public void testPalindromePermutationRetrunFalseWhenStringIsNotPermutationOfPalindrome() {
+		assertFalse(ArraysAndStrings.palindromePermutation("Zenith"));
+
+	}
 }

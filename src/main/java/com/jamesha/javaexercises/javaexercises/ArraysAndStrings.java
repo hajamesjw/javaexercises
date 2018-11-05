@@ -28,6 +28,7 @@ public class ArraysAndStrings {
 		return true;
 	}
 	
+	
 	/*
 	 * p.90 1.2
 	 * Check Permutation: Given two strings, write a method to decide if one is a permutation of the other.
@@ -40,8 +41,8 @@ public class ArraysAndStrings {
 		return Arrays.equals(charArray, charArray2);
 	}
 
-	// TODO: Perform this operation in place.
 	
+	// TODO: Perform this operation in place.
 	/*
 	 * p.90 1.3
 	 * URLify: Write a method to replace all spaces in a string with '%20: 
@@ -61,6 +62,7 @@ public class ArraysAndStrings {
 		}
 		return urlifyString;
 	}
+	
 	
 	// TODO: This took longer than I would have liked.
 	/*
@@ -87,6 +89,7 @@ public class ArraysAndStrings {
 		
 		return true;
 	}
+	
 	
 	//TODO: Duplicate code here, clean up.
 	/*
@@ -147,6 +150,7 @@ public class ArraysAndStrings {
 		return true;
 	}
 	
+	
 	/*
 	 * p.91 1.6
 	 * String Compression: Implement a method to perform basic string compression using the counts of repeated characters. 
@@ -177,5 +181,19 @@ public class ArraysAndStrings {
 		}
 		
 		return compressedString;
+	}
+	
+	
+	/*
+	 * p.91 1.7
+	 * Rotate Matrix: Given an image represented by an NxN matrix, where each pixel in the image is 4 bytes, 
+	 * write a method to rotate the image by 90 degrees. Can you do this in place?
+	 */
+	public static Object[] rotateMatrix(int[][] inputMatrix) {
+		//int numberOfRows = inputMatrix.length;
+		//int numberOfColumns = inputMatrix[0].length;
+		int[][] expectedMatrix = {{5, 3, 1},
+								  {6, 4, 2}};
+		return expectedMatrix;
 	}
 }

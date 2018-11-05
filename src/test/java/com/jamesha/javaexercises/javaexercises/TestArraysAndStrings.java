@@ -4,6 +4,9 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import java.util.Arrays;
+
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 public class TestArraysAndStrings {
@@ -96,5 +99,15 @@ public class TestArraysAndStrings {
 	@Test
 	public void testStringCompressionWithLongerCompressedStringReturnInputString() {
 		assertEquals("abccd", ArraysAndStrings.stringCompression("abccd"));
+	}
+	
+	@Test
+	public void testRotateMatrix() {
+		int[][] inputMatrix = {{1, 2}, 
+							   {3, 4},
+							   {5, 6}};
+		int[][] expectedMatrix = {{5, 3, 1},
+								  {6, 4, 2}};
+		Assert.assertArrayEquals(expectedMatrix, ArraysAndStrings.rotateMatrix(inputMatrix));
 	}
 }

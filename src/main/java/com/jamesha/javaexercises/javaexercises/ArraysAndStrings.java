@@ -102,7 +102,33 @@ public class ArraysAndStrings {
 		if (charArray.length - charArray2.length > 1 || charArray.length - charArray2.length < -1) {
 			return false;
 		}
-		if (charArray.length == charArray2.length) {
+		
+		//int j = 0;
+		
+		if (charArray.length == charArray2.length + 1) {
+			for (int i = 0, j = 0; i < charArray2.length; i++, j++) {
+				if (charArray[j] != charArray2[i]) {
+					if (oneCharacterAlreadyAwayFlag) {
+						return false;
+					}
+					oneCharacterAlreadyAwayFlag = true;
+					i--;
+				}
+			}
+			
+		} else if (charArray.length + 1 == charArray2.length) {
+			for (int i = 0, j = 0; i < charArray.length; i++, j++) {
+				if (charArray[i] != charArray2[j]) {
+					if (oneCharacterAlreadyAwayFlag) {
+						return false;
+					}
+					oneCharacterAlreadyAwayFlag = true;
+					i--;
+				}
+			}			
+			
+		} else {
+
 			for (int i = 0; i < charArray.length; i++) {
 				if (charArray[i] != charArray2[i]) {
 					if (oneCharacterAlreadyAwayFlag) {
@@ -111,16 +137,13 @@ public class ArraysAndStrings {
 						oneCharacterAlreadyAwayFlag = true;
 					}
 				}
- 			}
+			}
 			
 			if (!oneCharacterAlreadyAwayFlag) {
 				return false;
 			}
-			
-		} else if (charArray.length == charArray2.length + 1) {
-			return true;
-		}
 		
+		}
 		return true;
 	}
 }

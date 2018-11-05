@@ -74,6 +74,16 @@ public class TestArraysAndStrings {
 	}
 	
 	@Test
+	public void testOneAwayWhenOneCharacterRemovedAndOneCharacterChangedReturnFalse() {
+		assertFalse(ArraysAndStrings.oneAway("abcde", "abcx"));
+	}
+	
+	@Test
+	public void testOneAwayWhenOneCharacterAddedAndOneCharacterChangedReturnFalse() {
+		assertFalse(ArraysAndStrings.oneAway("abcde", "abcdxx"));
+	}
+	
+	@Test
 	public void testOneAwayWithSameStringsReturnFalse() {
 		assertFalse(ArraysAndStrings.oneAway("abcde", "abcde"));
 	}

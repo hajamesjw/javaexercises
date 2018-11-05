@@ -172,6 +172,10 @@ public class ArraysAndStrings {
 		
 		compressedString = compressedString + j;
 
+		if (compressedString.length() > stringToCompress.length()) {
+			return stringToCompress;
+		}
+		
 		return compressedString;
 	}
 }

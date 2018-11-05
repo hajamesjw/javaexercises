@@ -109,9 +109,13 @@ public class ArraysAndStrings {
 					}
 				}
  			}
-		}
-		if (!oneCharacterAlreadyAwayFlag) {
-			return false;
+			
+			if (!oneCharacterAlreadyAwayFlag) {
+				return false;
+			}
+			
+		} else if (charArray.length == charArray2.length + 1) {
+			return true;
 		}
 		
 		return true;

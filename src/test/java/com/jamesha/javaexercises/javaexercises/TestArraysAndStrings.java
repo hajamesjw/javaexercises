@@ -44,13 +44,18 @@ public class TestArraysAndStrings {
 	}
 	
 	@Test
-	public void testOneAwayWhenOneCharacterIsReplacedReturnTrue() {
+	public void testOneAwayWhenOneCharacterReplacedReturnTrue() {
 		assertTrue(ArraysAndStrings.oneAway("abcde", "abcdz"));
 	}
 	
 	@Test
-	public void testOneAwayWhenTwoCharacterIsReplacedReturnFalse() {
+	public void testOneAwayWhenTwoCharacterReplacedReturnFalse() {
 		assertFalse(ArraysAndStrings.oneAway("abcde", "abczz"));
+	}
+	
+	@Test
+	public void testOneAwayWhenOneCharacterAddedReturnTrue() {
+		assertTrue(ArraysAndStrings.oneAway("abcde", "abzcde"));
 	}
 	
 	@Test

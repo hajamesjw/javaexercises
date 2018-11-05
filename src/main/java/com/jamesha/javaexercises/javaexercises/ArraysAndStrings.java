@@ -155,6 +155,23 @@ public class ArraysAndStrings {
 	 * You can assume the string has only uppercase and lowercase letters (a - z).
 	 */
 	public static String stringCompression(String stringToCompress) {
-		return "a2b1c5a3";
+		char[] charArrayOfStringToCompress = stringToCompress.toLowerCase().toCharArray();
+		String compressedString = "";
+		int j = 0;
+		for (int i = 0; i < charArrayOfStringToCompress.length; i++) {
+			if (i - 1 < 0) {
+				compressedString = compressedString + charArrayOfStringToCompress[i];
+				j++;
+			} else if (charArrayOfStringToCompress[i] != charArrayOfStringToCompress[i-1]) {
+				compressedString = compressedString + j + charArrayOfStringToCompress[i];
+				j = 1;
+			} else {
+				j++;
+			}
+		}
+		
+		compressedString = compressedString + j;
+
+		return compressedString;
 	}
 }

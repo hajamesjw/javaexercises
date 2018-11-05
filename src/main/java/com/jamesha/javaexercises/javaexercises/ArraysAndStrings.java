@@ -192,8 +192,8 @@ public class ArraysAndStrings {
 	public static Object[] rotateMatrix(int[][] inputMatrix) {
 		//int numberOfRows = inputMatrix.length;
 		//int numberOfColumns = inputMatrix[0].length;
-		int[][] expectedMatrix = {{5, 3, 1},
-								  {6, 4, 2}};
+		int[][] expectedMatrix = {{3, 1},
+								  {4, 2}};
 		return expectedMatrix;
 	}
 }

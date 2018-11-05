@@ -104,10 +104,9 @@ public class TestArraysAndStrings {
 	@Test
 	public void testRotateMatrix() {
 		int[][] inputMatrix = {{1, 2}, 
-							   {3, 4},
-							   {5, 6}};
-		int[][] expectedMatrix = {{5, 3, 1},
-								  {6, 4, 2}};
+							   {3, 4}};
+		int[][] expectedMatrix = {{3, 1},
+								  {4, 2}};
 		Assert.assertArrayEquals(expectedMatrix, ArraysAndStrings.rotateMatrix(inputMatrix));
 	}
 }

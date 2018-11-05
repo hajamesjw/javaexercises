@@ -99,6 +99,9 @@ public class ArraysAndStrings {
 		char[] charArray = string.toCharArray();
 		char[] charArray2 = string2.toCharArray();
 		boolean oneCharacterAlreadyAwayFlag = false;
+		if (charArray.length - charArray2.length > 1 || charArray.length - charArray2.length < -1) {
+			return false;
+		}
 		if (charArray.length == charArray2.length) {
 			for (int i = 0; i < charArray.length; i++) {
 				if (charArray[i] != charArray2[i]) {

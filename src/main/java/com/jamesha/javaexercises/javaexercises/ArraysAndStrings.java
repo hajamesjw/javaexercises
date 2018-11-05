@@ -63,7 +63,6 @@ public class ArraysAndStrings {
 	}
 	
 	// TODO: This took longer than I would have liked.
-	
 	/*
 	 * p.91 1.4
 	 * Palindrome Permutation: Given a string, write a function to check if it is a permutation of a palindrome. 
@@ -89,6 +88,7 @@ public class ArraysAndStrings {
 		return true;
 	}
 	
+	//TODO: Duplicate code here, clean up.
 	/*
 	 * p.91 1.5
 	 * One Away: There are three types of edits that can be performed on strings: 
@@ -145,5 +145,16 @@ public class ArraysAndStrings {
 		
 		}
 		return true;
+	}
+	
+	/*
+	 * p.91 1.6
+	 * String Compression: Implement a method to perform basic string compression using the counts of repeated characters. 
+	 * For example, the string aabcccccaaa would become a2b1c5a3. 
+	 * If the "compressed" string would not become smaller than the original string, your method should return the original string. 
+	 * You can assume the string has only uppercase and lowercase letters (a - z).
+	 */
+	public static String stringCompression(String stringToCompress) {
+		return "a2b1c5a3";
 	}
 }

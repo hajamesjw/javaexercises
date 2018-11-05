@@ -88,4 +88,9 @@ public class TestArraysAndStrings {
 		assertFalse(ArraysAndStrings.oneAway("abcde", "abcde"));
 	}
 	
+	@Test
+	public void testStringCompression() {
+		assertEquals("a2b1c5a3", ArraysAndStrings.stringCompression("aabcccccaaa"));
+	}
+	
 }
